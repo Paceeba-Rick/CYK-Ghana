@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYK Ghana</title>
+  <link rel="stylesheet" href="kinss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+<body id="themer">
+  <header>
+    <h1>Welcome to <b style="color: #e90a0a;">C</b><b style="color: #720ae9;">Y</b><b style="color: #0adae9;">K</b><b style="color: #5be9b9;"> Ghana</b> </h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tourist-sites">Tourist Sites</a></li>
+        <li><a href="#events">Upcoming Events</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#books">Order Books</a></li>
+        <li><button id="themeButton" onclick="changeTheme()">Theme</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>About Kintampo</h2>
+    <div id="p">
+      <p>
+        <h4 id="home-intro">
+          Kintampo is a vibrant community rich in culture, history, and natural beauty. Explore our tourist sites, stay updated on events, and learn more about our heritage.
+        </h4>
+      </p>
+    </div>
+    <hr>
+    <div id="p">
+      <p id="home-road">Kintampo is well-connected by road, with major highways like the N10 and N11 passing through the town. These roads facilitate the movement of goods and people, linking Kintampo to cities like Kumasi, Tamale, and Accra. However, some rural roads still require upgrades to improve accessibility for surrounding communities.</p>
+    </div>
+    <div id="home-image">
+      <img src="kintampo.jpg" alt="Kintampo Landscape" id="home-img-1">
+    </div>
+    <div id="p">
+      <p id="home-college">The Kintampo College of Health and Well-Being (formerly known as the Kintampo Rural Health Training School) is one of Ghana's premier institutions dedicated to training healthcare professionals. Located in the heart of Kintampo, in the Bono East Region, the college plays a critical role in addressing Ghana's healthcare needs by producing skilled and compassionate health workers.</p>
+    </div>
+    <div id="home-image">
+      <img src="college.jpg" alt="Kintampo Landscape" id="home-img-2">
+    </div>
+    <div id="p">
+      <p id="home-hospital">The town is home to the Kintampo Municipal Hospital, which serves as a key healthcare provider for the region. Additionally, there are several clinics and community health centers that cater to the needs of residents and nearby rural areas.</p>
+    </div>
+    <div id="home-image">
+      <img src="hospital.jpg" alt="Kintampo Landscape" id="home-img-3">
+    </div>
+  </section>
+  
+  <section id="tourist-sites">
+    <h2><center>Tourist Sites</center></h2>
+    <div class="tourist-sites-container">
+
+      <div class="tourist-site">
+        <img src="museum.jpg" alt="Kintampo Museum" id="tourist-img-2">
+        <h3 id="tourist-title-2">Kintampo Museum</h3>
+        <p id="tourist-desc-2">Learn about the rich history and culture of the Kintampo people.</p>
+      </div>
+
+      <div class="tourist-site">
+        <img src="waterfalls.jpeg" alt="Kintampo Waterfalls" id="tourist-img-1">
+        <h3 id="tourist-title-1">Kintampo Waterfalls</h3>
+        <p id="tourist-desc-1">A breathtaking natural wonder perfect for hiking and picnics.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <ul id="events-list">
+      <li id="event-1">Cultural Festival - October 15, 2025</li>
+      <li id="event-2">Community Clean-Up - November 5, 2025</li>
+      <li id="event-3">Farmers Market - Every Saturday</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <div class="blog-post">
+      <h2>Blog</h2>
+      <h3 id="blog-title">Exploring Kintampo's History</h3>
+      <p>Posted by Admin on <span id="blog-date">March 23, 2025</span></p>
+      <h2 id="blog-subtitle">Discover the fascinating history of Kintampo through our latest blog post.</h2>
+      <p id="blog-para-1">
+        While the Kintampo Waterfalls often steal the spotlight, Fuller Falls is another hidden gem worth exploring. Located a few kilometers from the main town, this lesser-known waterfall offers a more secluded and tranquil experience. The journey to Fuller Falls is an adventure in itself, as you trek through scenic trails and immerse yourself in the natural beauty of the region.
+      </p>
+      <p id="blog-para-2">
+        Kintampo is not just about natural wonders; it's also a place where you can connect with Ghana's rich cultural heritage. The town is home to the Kintampo people, who are known for their warm hospitality and vibrant traditions. Take the time to visit local communities, where you can learn about traditional crafts, music, and dance. If you're lucky, you might even witness a cultural festival or ceremony, which are often filled with colorful costumes, drumming, and storytelling.
+      </p>
+      <p id="blog-para-3">
+        Kintampo holds a special place in Ghana's history. It is believed to be the geographical center of Ghana, earning it the nickname "The Center of Ghana." This strategic location has made Kintampo a hub for trade and commerce over the years. The town also played a role in the trans-Saharan trade routes, connecting West Africa to North Africa and beyond.
+
+        For history enthusiasts, a visit to the Kintampo Museum is a must. The museum offers insights into the town's past, including its role in Ghana's pre-colonial and colonial history. You'll find artifacts, photographs, and exhibits that tell the story of Kintampo's evolution over the centuries.
+      </p>
+      <span id="like-count">0</span>
+      <i onclick="likePost()" class="fa-solid fa-thumbs-up"></i>
+      <span id="dislike-count">0</span>
+      <i onclick="dislikePost()" class="fa-solid fa-thumbs-down"></i>
+       
+      <div class="comments">
+        <h4>Comments</h4>
+        <input type="text" id="comment-input" placeholder="Add a comment">
+        <button onclick="addComment()">Submit</button>
+        <ul id="comment-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="books">
+    <h2><center>Order Books</center></h2>
+    <form id="book-order-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      
+      <label for="book">Select Book:</label>
+      <select id="book" required>
+        <option value="history">History of Kintampo</option>
+        <option value="culture">Kintampo Culture</option>
+        <option value="tourism">Tourist Guide to Kintampo</option>
+      </select>
+      
+      <button type="submit">Order Now</button>
+      <input type="reset" value="Clear">
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact Us: CYK-Ghana@gmail.com || Follow us on <a href="#">Facebook</a></p>
+    <button id="admin-toggle" onclick="toggleAdminPanel()">Admin Login</button>
+    
+    <div class="admin-panel" id="admin-panel">
+      <h3 style="color: black;">Admin Controls</h3>
+      <div class="admin-controls">
+        <div class="section-edit">
+          <h4 style="color: black;">Edit Home Section</h4>
+          <textarea id="home-edit" placeholder="Edit home section content"></textarea>
+          <div class="image-upload">
+            <label style="color: black;">Upload Home Image:</label>
+            <input type="file" id="home-image-upload" accept="image/*">
+            <button onclick="updateHomeImage()">Update Image</button>
+          </div>
+        </div>
+        
+        <div class="section-edit">
+          <h4 style="color: black;">Edit Tourist Sites</h4>
+          <textarea id="tourist-edit" placeholder="Edit tourist sites content"></textarea>
+          <div class="image-upload">
+            <label style="color: black;">Upload Tourist Site Image:</label>
+            <input type="file" id="tourist-image-upload" accept="image/*">
+            <button onclick="updateTouristImage()">Update Image</button>
+          </div>
+        </div>
+        
+        <div class="section-edit">
+          <h4 style="color: black;">Edit Events</h4>
+          <textarea id="events-edit" placeholder="Edit events content (one per line)"></textarea>
+        </div>
+        
+        <div class="section-edit">
+          <h4 style="color: black;">Edit Blog</h4>
+          <textarea id="blog-edit" placeholder="Edit blog content"></textarea>
+        </div>
+        
+        <button onclick="saveAllChanges()">Save Changes (Temporary)</button>
+        <button onclick="resetAllChanges()">Reset</button>
+      </div>
+    </div>
+  </footer>
+<script src="kinss.js"></script>
+</body>
+</html>  
