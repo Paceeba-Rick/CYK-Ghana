@@ -5,369 +5,245 @@
       --background-dark: #1a1a1a;
       --text-light: #333;
       --text-dark: #f0f0f0;
-      --section-padding: 1.5rem;
-      --section-margin: 1rem;
-      --border-radius: 8px;
     }
-    
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: var(--text-light);
-      background-color: #f5f5f5;
+      box-sizing: border-box;
       transition: all 0.3s ease;
     }
-    
-    /* Header Styles */
     header {
       width: 100%;
       background-color: var(--primary-color);
       color: white;
-      padding: 1rem 0;
+      padding: 10px 0;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    
-    header h1 {
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      margin-bottom: 0.5rem;
+    #home {
+      width: 95%;
+      max-width: 1200px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 0 auto 10px;
+      background-color: var(--background-light);
+      border-radius: 5px;
     }
-    
-    /* Navigation */
+    #events {
+      width: 95%;
+      max-width: 1200px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 0 auto 10px;
+      background-color: rgb(215, 246, 250);
+      border-radius: 5px;
+    }
+    #blog {
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
     nav ul {
       list-style: none;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.5rem;
     }
-    
     nav ul li {
-      margin: 0.2rem;
+      margin: 5px 10px;
     }
-    
     nav ul li a {
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
+      padding: 5px 10px;
+      border-radius: 5px;
       transition: background-color 0.3s;
-      font-size: clamp(0.8rem, 3vw, 1rem);
-      display: inline-block;
     }
-    
     nav ul li a:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
-    
-    /* Main Content */
-    main {
-      padding: 1rem;
+    section {
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .tourist-sites-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 95%;
       max-width: 1200px;
       margin: 0 auto;
     }
-    
-    section {
-      background-color: white;
-      padding: var(--section-padding);
-      margin: var(--section-margin) 0;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      font-size: clamp(1.3rem, 4vw, 1.8rem);
-    }
-    
-    h3 {
-      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
-      margin: 1rem 0;
-    }
-    
-    h4 {
-      font-size: clamp(1rem, 3vw, 1.2rem);
-    }
-    
-    p {
-      margin-bottom: 1rem;
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-    }
-    
-    /* Home Section */
-    #home {
-      background-color: rgb(203, 248, 252);
-    }
-    
-    #home-image {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: var(--border-radius);
-      margin: 1rem 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    /* Tourist Sites */
-    .tourist-sites-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      width: 100%;
-    }
-    
     .tourist-site {
-      border: 1px solid #ddd;
-      padding: 1rem;
+      border: 1px solid #ccc;
+      padding: 15px;
       background-color: rgb(215, 245, 250);
-      border-radius: var(--border-radius);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 5px;
+      transition: transform 0.3s;
     }
-    
     .tourist-site:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
     .tourist-site img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      border-radius: var(--border-radius);
-      margin-bottom: 1rem;
+      border-radius: 5px;
     }
-    
-    /* Events */
-    #events ul {
-      padding-left: 0;
-    }
-    
-    #events li {
-      list-style: none;
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #eee;
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-    }
-    
-    /* Blog */
     .blog-post {
       width: 100%;
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
       background-color: rgb(215, 245, 250);
-      border-radius: var(--border-radius);
+      border-radius: 5px;
     }
-    
     .comments {
-      margin-top: 1.5rem;
+      margin-top: 20px;
     }
-    
-    /* Forms */
-    #book-order-form {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    #book-order-form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-    
-    #book-order-form input,
-    #book-order-form select {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius);
-      font-size: 1rem;
-    }
-    
-    #book-order-form button {
-      background-color: rgb(6, 167, 41);
-      color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      margin-right: 1rem;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-    }
-    
-    #book-order-form button:hover {
-      background-color: rgb(5, 140, 35);
-    }
-    
-    #comment-input {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius);
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-    
-    /* Footer */
     footer {
       width: 100%;
       background-color: var(--secondary-color);
       color: white;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    footer p {
-      margin-bottom: 1rem;
-      color: white;
+    #home-image {
+      display: none; /* Remove images from the home section */
     }
-    
-    footer a {
-      color: rgb(91, 160, 240);
-      text-decoration: none;
+    #events ul {
+      padding-left: 0;
     }
-    
-    /* Admin Panel */
-    .admin-panel {
-      display: none;
-      background-color: #f8f9fa;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    #events li {
+      list-style: none;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
     }
-    
-    .admin-controls {
-      margin-top: 1.5rem;
-    }
-    
-    .section-edit {
-      margin-bottom: 1.5rem;
-    }
-    
-    .section-edit textarea {
-      width: 100%;
-      min-height: 150px;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius);
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    
-    .image-upload {
-      margin: 1rem 0;
-    }
-    
-    .image-upload label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-    
-    /* Buttons */
-    button {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-    }
-    
-    button:hover {
-      background-color: #3e8e41;
-    }
-    
-    #themeButton {
-      background-color: rgb(0, 247, 255);
-      color: #333;
-    }
-    
-    #themeButton:hover {
-      background-color: rgb(94, 255, 0);
-    }
-    
-    /* Like/Dislike buttons */
     .fa-thumbs-up {
       color: #4CAF50;
-      margin: 0 0.5rem;
+      margin: 10px;
       cursor: pointer;
-      font-size: 1.2rem;
     }
-    
     .fa-thumbs-down {
       color: #e90a0a;
       cursor: pointer;
-      font-size: 1.2rem;
     }
-    
-    /* Dark Mode */
+    #p {
+      width: 100%;
+      line-height: 1.6;
+    }
+    #themeButton {
+      border: none;
+      background-color: rgb(0, 247, 255);
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #themeButton:hover {
+      background-color: rgb(94, 255, 0);
+    }
+    #book-order-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #book-order-form input,
+    #book-order-form select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    #book-order-form button {
+      background-color: rgb(6, 167, 41);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    #comment-input {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .admin-panel {
+      display: none;
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .admin-controls {
+      margin-top: 20px;
+    }
+    .admin-controls button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .section-edit {
+      margin-bottom: 15px;
+    }
+    .section-edit textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tourist-sites-container {
+        grid-template-columns: 1fr;
+      }
+      #comment-input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    /* Dark mode styles */
     body.dark-mode {
       background-color: #121212;
       color: #f0f0f0;
     }
-    
-    body.dark-mode section,
     body.dark-mode .tourist-site,
-    body.dark-mode .blog-post {
+    body.dark-mode .blog-post,
+    body.dark-mode #home,
+    body.dark-mode #events {
       background-color: #2d2d2d;
       color: #f0f0f0;
       border-color: #444;
     }
-    
     body.dark-mode #book-order-form,
     body.dark-mode .comments input {
       background-color: #333;
       color: #f0f0f0;
     }
-    
     body.dark-mode #book-order-form input,
     body.dark-mode #book-order-form select {
       background-color: #444;
       color: #f0f0f0;
       border-color: #555;
-    }
-    
-     
-    
-    @media (max-width: 460px) {
-      :root {
-        --section-padding: 1rem;
-        --section-margin: 0.5rem;
-      }
-      
-      header {
-        padding: 0.8rem 0;
-      }
-      
-      #book-order-form button {
-        width: 100%;
-        margin-bottom: 0.5rem;
-      }
-      
-      #book-order-form input[type="reset"] {
-        width: 100%;
-      }
     }
