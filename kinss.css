@@ -330,6 +330,7 @@
     }
     
     body.dark-mode section,
+    body.dark-mode .home,
     body.dark-mode .tourist-site,
     body.dark-mode .blog-post {
       background-color: #2d2d2d;
