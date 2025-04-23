@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KintampoToDay</title>
+  <title>CYK Ghana</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="kinss.css">
-  </head>
+</head>
 <body id="themer">
   <header>
-    <h1>Welcome to KintampoToDay</h1>
+    <h1>Welcome to CYK Ghana</h1>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -17,10 +17,11 @@
         <li><a href="#events">Upcoming Events</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#books">Order Books</a></li>
-        <li><button id="themeButton" onclick="changeTheme()">Theme</button></li>
+        <li><button id="themeButton" onclick="changeTheme()">Dark Mode</button></li>
       </ul>
     </nav>
   </header>
+
   <section id="home">
     <h2>About Kintampo</h2>
     <div id="p">
@@ -41,8 +42,9 @@
       <p id="home-hospital">The town is home to the Kintampo Municipal Hospital, which serves as a key healthcare provider for the region. Additionally, there are several clinics and community health centers that cater to the needs of residents and nearby rural areas.</p>
     </div>
   </section>
+  
   <section id="tourist-sites">
-    <h2>Tourist Sites</h2>
+    <h2><center>Tourist Sites</center></h2>
     <div class="tourist-sites-container">
       <div class="tourist-site">
         <img src="waterfalls.jpeg" alt="Kintampo Waterfalls" id="tourist-img-1">
@@ -56,6 +58,7 @@
       </div>
     </div>
   </section>
+
   <section id="events">
     <h2>Upcoming Events</h2>
     <ul id="events-list">
@@ -64,6 +67,7 @@
       <li id="event-3">Farmers Market - Every Saturday</li>
     </ul>
   </section>
+
   <section id="blog">
     <div class="blog-post">
       <h2>Blog</h2>
@@ -78,12 +82,14 @@
       </p>
       <p id="blog-para-3">
         Kintampo holds a special place in Ghana's history. It is believed to be the geographical center of Ghana, earning it the nickname "The Center of Ghana." This strategic location has made Kintampo a hub for trade and commerce over the years. The town also played a role in the trans-Saharan trade routes, connecting West Africa to North Africa and beyond.
+
         For history enthusiasts, a visit to the Kintampo Museum is a must. The museum offers insights into the town's past, including its role in Ghana's pre-colonial and colonial history. You'll find artifacts, photographs, and exhibits that tell the story of Kintampo's evolution over the centuries.
       </p>
       <span id="like-count">0</span>
       <i onclick="likePost()" class="fa-solid fa-thumbs-up"></i>
       <span id="dislike-count">0</span>
       <i onclick="dislikePost()" class="fa-solid fa-thumbs-down"></i>
+       
       <div class="comments">
         <h4>Comments</h4>
         <input type="text" id="comment-input" placeholder="Add a comment">
@@ -92,26 +98,32 @@
       </div>
     </div>
   </section>
+
   <section id="books">
-    <h2>Order Books</h2>
+    <h2><center>Order Books</center></h2>
     <form id="book-order-form">
       <label for="name">Name:</label>
       <input type="text" id="name" required>
+      
       <label for="email">Email:</label>
       <input type="email" id="email" required>
+      
       <label for="book">Select Book:</label>
       <select id="book" required>
         <option value="history">History of Kintampo</option>
         <option value="culture">Kintampo Culture</option>
         <option value="tourism">Tourist Guide to Kintampo</option>
       </select>
+      
       <button type="submit">Order Now</button>
       <input type="reset" value="Clear">
     </form>
   </section>
+
   <footer>
     <p>Contact Us: info@kintampotoday.com | Follow us on <a href="#">Facebook</a></p>
     <button id="admin-toggle" onclick="toggleAdminPanel()">Admin Login</button>
+    
     <div class="admin-panel" id="admin-panel">
       <h3>Admin Controls</h3>
       <div class="admin-controls">
@@ -119,25 +131,32 @@
           <h4>Edit Home Section</h4>
           <textarea id="home-edit" placeholder="Edit home section content"></textarea>
         </div>
+        
         <div class="section-edit">
           <h4>Edit Tourist Sites</h4>
           <textarea id="tourist-edit" placeholder="Edit tourist sites content"></textarea>
+          <div class="image-upload">
+            <label>Upload Tourist Site Image:</label>
+            <input type="file" id="tourist-image-upload" accept="image/*">
+            <button onclick="updateTouristImage()">Update Image</button>
+          </div>
         </div>
+        
         <div class="section-edit">
           <h4>Edit Events</h4>
           <textarea id="events-edit" placeholder="Edit events content (one per line)"></textarea>
         </div>
+        
         <div class="section-edit">
           <h4>Edit Blog</h4>
           <textarea id="blog-edit" placeholder="Edit blog content"></textarea>
         </div>
+        
         <button onclick="saveAllChanges()">Save Changes (Temporary)</button>
         <button onclick="resetAllChanges()">Reset</button>
       </div>
     </div>
   </footer>
-  <script src="kinss.js">
-    // Store original content
-  </script>
+<script src="kinss.js"></script>
 </body>
 </html>
